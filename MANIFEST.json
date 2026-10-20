@@ -4561,15 +4561,15 @@
       "xgboost": "3.4.1",
       "scikit-learn": "1.9.1"
     },
-    "previous_measurement": {
+    "persistence_reference": "each config's eval AUC for prev_code_present alone (was this code cited on the licence's most recent strictly-earlier inspection) is recorded in the package measurements (measurements.json -> levels.<config>.persistence_baseline), so any model's headroom over the code's own persistence is checkable per config; the baselines here do not recompute it",
+    "scope": "baselines only, through the runner's own contract. No coding agent and no harness comparison was run, and none is implied.",
+    "evidence": ".factory/food-baseline-003/reports/output/baseline.json plus the per-config accept/train/validate logs beside it, fetched from the job's staging release and sha256-verified against that release's own asset list",
+    "corroborating_measurement": {
       "job": "food-baseline-002",
       "config": "code_38",
       "eval_auc": 0.6326,
-      "what": "the earlier sanity check through the same contract on the mid-prevalence config, on the same accepted artifact (re-accepted through --accept first)"
-    },
-    "persistence_reference": "each config's eval AUC for prev_code_present alone (was this code cited on the licence's most recent strictly-earlier inspection) is recorded in the package measurements (measurements.json -> levels.<config>.persistence_baseline), so any model's headroom over the code's own persistence is checkable per config; the baselines here do not recompute it",
-    "scope": "baselines only, through the runner's own contract. No coding agent and no harness comparison was run, and none is implied.",
-    "evidence": ".factory/food-baseline-003/reports/output/baseline.json plus the per-config accept/train/validate logs beside it, fetched from the job's staging release and sha256-verified against that release's own asset list"
+      "what": "an earlier pass measured the same quantity through the same contract on the mid-prevalence config, on the same accepted artifact (re-accepted through --accept first); the suite baseline reproduced it exactly, so this is corroborating history, not a superseded value"
+    }
   },
   "scope": "One baseline through the runner's training and validation contract. No agent or harness comparison was run and none is implied.",
   "published": false,
